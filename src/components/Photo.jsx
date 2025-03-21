@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import photo from '../assets/photo.png'; // Mengimpor gambar
+import photo from '../assets/photo.png'; 
 
 const Photo = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,7 +15,7 @@ const Photo = () => {
   return (
     <div className="w-full h-full relative">
       <div
-        className={`xl:w-[500px] xl:h-[300px] transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'} -mt-16`}
+        className={`xl:w-[500px] xl:h-[300px] transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'} mix-blend-lighten -mt-16`}
       >
         <img
           src={photo} 
