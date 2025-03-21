@@ -1,18 +1,28 @@
+import { useEffect, useState } from 'react';
+import photo from '../assets/photo.png'; // Mengimpor gambar
+
 const Photo = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100); 
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="w-full h-full relative">
-      <motion.div
-        className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]"
-        initial={{ opacity: 0 }} 
-        animate={{ opacity: 1 }} 
-        transition={{ duration: 0.5 }} 
+      <div
+        className={`xl:w-[500px] xl:h-[300px] transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'} -mt-16`}
       >
         <img
-          src="/assets/photo.jpg" 
+          src={photo} 
           alt="Photo"
-          className="object-contain w-full h-full" 
+          className="object-contain w-full h-full"
         />
-      </motion.div>
+      </div>
     </div>
   );
 };
