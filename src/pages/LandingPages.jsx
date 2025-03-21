@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Home from '../components/Home';
 import About from '../components/About';
 import Skill from '../components/Skill';
+import Work from '../components/Work';
 
 const LandingPages = () => {
   return (
@@ -11,6 +12,7 @@ const LandingPages = () => {
       <Home />
       <About />
       <Skill />
+      <Work />
     </div>
   );
 };
