@@ -1,17 +1,7 @@
-
-import './App.css'
+import LandingPages from './pages/LandingPages';
 
 function App() {
-  
-  return (
-    <>
-      <div>
-      <h1 className="font-jetbrains text-3xl">
-  Hello with JetBrains Mono!
-</h1>
-</div>
-    </>
-  )
+  return <LandingPages />;
 }
 
-export default App
+export default App;
