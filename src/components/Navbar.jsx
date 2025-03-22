@@ -1,11 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
-    <nav className="flex justify-between items-center py-6 px-12 bg-transparent text-white font-jetbrains">
+    <nav className="flex justify-between items-center py-6 px-6 md:px-12 bg-transparent text-white font-jetbrains">
       <h1 className="text-2xl font-bold text-green-400">Muhamad Aziz</h1>
-      <ul className="flex gap-8">
+
+      {/* Mobile Menu Toggle */}
+      <div className="md:hidden">
+        <button
+          onClick={toggleMenu}
+          className="text-white focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      {/* Desktop Menu */}
+      <ul className={`flex gap-8 md:flex-row flex-col md:flex ${isMobileMenuOpen ? 'block' : 'hidden'} md:block`}>
         <li>
           <Link
             to="home"
@@ -53,7 +84,7 @@ const Navbar = () => {
             duration={500}
             className="hover:text-green-400 cursor-pointer"
           >
-            Lisence
+            License
           </Link>
         </li>
         <li>
@@ -67,9 +98,6 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <button className="ml-8 px-4 py-2 bg-green-400 text-black font-semibold rounded-full">
-        Hire me
-      </button>
     </nav>
   );
 };
