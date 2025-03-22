@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import { Typewriter } from 'react-simple-typewriter'
 import Photo from './Photo'
-import { FaGithub, FaLinkedinIn, FaInstagram, FaWhatsapp } from 'react-icons/fa'
+import { FaGithub, FaLinkedinIn, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 import { FiDownload } from 'react-icons/fi'
 
 const Home = () => {
@@ -42,17 +42,18 @@ const Home = () => {
 
         <div className="flex justify-center md:justify-start items-center gap-6 mb-12">
           <a
-            href="/cv.pdf"
+            href="../assets/cv.pdf"
+              download="cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-2 border-2 border-green-400 text-green-400 rounded-full hover:bg-green-400 hover:text-black transition-all duration-300 hover:scale-105"
           >
-            DOWNLOAD CV <FiDownload className="text-sm" />
+            Download CV <FiDownload className="text-sm" />
           </a>
 
           <div className="flex gap-4">
             <a
-              href="https://github.com/"
+              href="https://github.com/aziz4678"
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-green-400 text-green-400 p-2 rounded-full hover:bg-green-400 hover:text-black transition-all duration-300 hover:scale-110"
@@ -60,7 +61,7 @@ const Home = () => {
               <FaGithub size={16} />
             </a>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/muhamad-aziz-89a747195/"
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-green-400 text-green-400 p-2 rounded-full hover:bg-green-400 hover:text-black transition-all duration-300 hover:scale-110"
@@ -68,7 +69,7 @@ const Home = () => {
               <FaLinkedinIn size={16} />
             </a>
             <a
-              href="https://youtube.com/"
+              href="https://www.instagram.com/azmuhamaaad/"
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-green-400 text-green-400 p-2 rounded-full hover:bg-green-400 hover:text-black transition-all duration-300 hover:scale-110"
@@ -76,12 +77,20 @@ const Home = () => {
               <FaInstagram size={16} />
             </a>
             <a
-              href="https://twitter.com/"
+              href="http://wa.me/6282110781175"
               target="_blank"
               rel="noopener noreferrer"
               className="border-2 border-green-400 text-green-400 p-2 rounded-full hover:bg-green-400 hover:text-black transition-all duration-300 hover:scale-110"
             >
               <FaWhatsapp size={16} />
+            </a>
+            <a
+              href="https://www.youtube.com/@muhamadaziz5953"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-green-400 text-green-400 p-2 rounded-full hover:bg-green-400 hover:text-black transition-all duration-300 hover:scale-110"
+            >
+              <FaYoutube size={16} />
             </a>
           </div>
         </div>
