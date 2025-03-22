@@ -1,10 +1,10 @@
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion'
-import React from 'react'
-import { Typewriter } from 'react-simple-typewriter'
-import Photo from './Photo'
-import { FaGithub, FaLinkedinIn, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa'
-import { FiDownload } from 'react-icons/fi'
+import { motion } from 'framer-motion';
+import React from 'react';
+import { Typewriter } from 'react-simple-typewriter';
+import Photo from './Photo';
+import { FaGithub, FaLinkedinIn, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa';
+import { FiDownload } from 'react-icons/fi';
 
 const Home = () => {
   return (
@@ -42,11 +42,10 @@ const Home = () => {
 
         <div className="flex justify-center md:justify-start items-center gap-6 mb-12">
           <a
-            href="../assets/cv.pdf"
-              download="cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://drive.google.com/file/d/1zAtYS3WZiiUShgqBuBDUOPE0IHVFSJcN/view?usp=sharing"
             className="flex items-center gap-2 px-5 py-2 border-2 border-green-400 text-green-400 rounded-full hover:bg-green-400 hover:text-black transition-all duration-300 hover:scale-105"
+            target="_blank"
+            rel="noopener noreferrer"          
           >
             Download CV <FiDownload className="text-sm" />
           </a>
@@ -105,7 +104,7 @@ const Home = () => {
         <Photo />
       </motion.div>
     </motion.section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
