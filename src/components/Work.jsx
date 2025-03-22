@@ -43,6 +43,9 @@ const Work = () => {
   return (
     <section className="min-h-screen px-6 md:px-12 bg-black text-white font-jetbrains flex flex-col justify-center">
       <h2 className="text-4xl md:text-5xl font-bold text-center text-green-400 mb-12">My Projects</h2>
+      <p className="text-lg text-center text-gray-300 mb-8">
+        Discover the projects I've been working on, showcasing my skills in various technologies and problem-solving approaches.
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <div
