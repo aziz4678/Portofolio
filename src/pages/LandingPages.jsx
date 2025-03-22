@@ -5,6 +5,7 @@ import About from '../components/About';
 import Skill from '../components/Skill';
 import Work from '../components/Work';
 import Lisence from '../components/Lisence'
+import Contact from '../components/Contact';
 
 const LandingPages = () => {
   return (
@@ -15,6 +16,7 @@ const LandingPages = () => {
       <Skill />
       <Work />
       <Lisence />
+      <Contact />
     </div>
   );
 };
