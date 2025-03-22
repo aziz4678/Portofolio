@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHtml5, FaCss3Alt, FaJs, FaPhp, FaNodeJs, FaReact, FaBootstrap, FaGitAlt, FaGithub, FaNpm, FaDatabase, FaFigma } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaPhp, FaNodeJs, FaReact, FaBootstrap, FaGitAlt, FaGithub, FaNpm, FaDatabase, FaFigma, FaPython } from 'react-icons/fa';
 import { SiTailwindcss, SiMongodb, SiVercel, SiNetlify, SiPostman, SiXampp } from 'react-icons/si';
 
 const skills = [
@@ -20,23 +20,24 @@ const skills = [
     { icon: <SiVercel size={40} className="text-white" />, name: "Vercel" },
     { icon: <FaHtml5 size={40} className="text-orange-500" />, name: "HTML" },
     { icon: <FaCss3Alt size={40} className="text-blue-500" />, name: "CSS" },
-    { icon: <FaNodeJs size={40} className="text-green-500" />, name: "NodeJS" }
-  ];  
+    { icon: <FaNodeJs size={40} className="text-green-500" />, name: "NodeJS" },
+    { icon: <FaPython size={40} className="text-blue-500" />, name: "Python" } 
+];
 
 const Skill = () => {
   return (
-    <section className="min-h-screen px-6 md:px-12 bg-black text-white font-jetbrains flex flex-col justify-center mt-20">
+    <section className="min-h-screen px-6 md:px-12 bg-black text-white font-jetbrains flex flex-col justify-center">
       <h2 className="text-4xl md:text-5xl font-bold text-center text-green-400 mb-12">
         Skills
       </h2>
       <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto -mt-6">
-      These are the tools I frequently use to build and develop my projects.
+        These are the tools I frequently use to build and develop my projects.
       </p>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col items-center bg-[#0f0f0f] p-4 rounded-2xl shadow-lg hover:shadow-green-400/30 transition-all duration-300"
+            className="flex flex-col items-center bg-[#0f0f0f] p-4 rounded-2xl shadow-lg hover:shadow-green-400/30 transition-all duration-300 transform hover:scale-110" // Menambahkan efek zoom in
           >
             {skill.icon}
             <p className="mt-2">{skill.name}</p>
