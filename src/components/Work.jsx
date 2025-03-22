@@ -1,8 +1,8 @@
 import React from 'react';
-import job from '../assets/job.png'
-import film from '../assets/film.png'
-import calculator from '../assets/calculator.png'
-import desa from '../assets/desa.png'
+import job from '../assets/job.png';
+import film from '../assets/film.png';
+import calculator from '../assets/calculator.png';
+import desa from '../assets/desa.png';
 
 const projects = [
   {
@@ -10,28 +10,32 @@ const projects = [
     description: "A movie review website.",
     features: "Review films, browse movies, responsive design.",
     image: film,
-    link: "https://reactjs-myflix.netlify.app/"
+    link: "https://reactjs-myflix.netlify.app/",
+    tech: "React, JavaScript, Tailwindcss"
   },
   {
     name: "JobPortal",
     description: "A job searching platform.",
     features: "Job listings, job application, user authentication.",
     image: job,
-    link: "https://reactjs-batch64-job-portal.netlify.app/"
+    link: "https://reactjs-batch64-job-portal.netlify.app/",
+    tech: "React, Tailwindcss, Node.js, MongoDB"
   },
   {
     name: "Administrasi Desa",
     description: "A village administration service app.",
     features: "Document requests, admin panel, public services.",
     image: desa,
-    link: "https://github.com/aziz4678/Administrasi-Desa"
+    link: "https://github.com/aziz4678/Administrasi-Desa",
+    tech: "PHP, MySQL, Boostrap"
   },
   {
     name: "Calculator",
     description: "An online calculator app.",
     features: "Basic operations, responsive UI, easy to use.",
     image: calculator,
-    link: "https://github.com/aziz4678/Calculator"
+    link: "https://github.com/aziz4678/Calculator",
+    tech: "HTML, CSS, JavaScript"
   }
 ];
 
@@ -41,12 +45,25 @@ const Work = () => {
       <h2 className="text-4xl md:text-5xl font-bold text-center text-green-400 mb-12">My Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <div key={index} className="bg-[#0f0f0f] p-4 rounded-2xl hover:shadow-green-400/30 transition-all duration-300">
-            <img src={project.image} alt={project.name} className="rounded-xl mb-4 w-full h-48 object-cover" />
+          <div
+            key={index}
+            className="bg-[#0f0f0f] p-4 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-green-500/30"
+          >
+            <img
+              src={project.image}
+              alt={project.name}
+              className="rounded-xl mb-4 w-full h-48 object-cover transition-all duration-300"
+            />
             <h3 className="text-2xl font-semibold mb-2">{project.name}</h3>
             <p className="mb-1 text-green-400">{project.description}</p>
             <p className="mb-4 text-sm text-gray-400">{project.features}</p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-green-400 underline hover:text-green-300">
+            <p className="mb-4 text-sm text-gray-500">Technologies: {project.tech}</p>
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-400 underline hover:text-green-300"
+            >
               View Project
             </a>
           </div>
