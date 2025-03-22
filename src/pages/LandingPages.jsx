@@ -6,7 +6,7 @@ import Home from '../components/Home';
 import About from '../components/About';
 import Skill from '../components/Skill';
 import Work from '../components/Work';
-import Lisence from '../components/Lisence'
+import Lisence from '../components/Lisence';
 import Contact from '../components/Contact';
 
 const LandingPages = () => {
@@ -18,6 +18,7 @@ const LandingPages = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        className="py-12"
       >
         <Home />
       </motion.section>
@@ -26,6 +27,7 @@ const LandingPages = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        className="py-12"
       >
         <About />
       </motion.section>
@@ -34,6 +36,7 @@ const LandingPages = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        className="py-12"
       >
         <Skill />
       </motion.section>
@@ -42,6 +45,7 @@ const LandingPages = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        className="py-12"
       >
         <Work />
       </motion.section>
@@ -50,6 +54,7 @@ const LandingPages = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        className="py-12"
       >
         <Lisence />
       </motion.section>
@@ -58,6 +63,7 @@ const LandingPages = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
+        className="py-12"
       >
         <Contact />
       </motion.section>
