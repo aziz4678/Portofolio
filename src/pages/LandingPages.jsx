@@ -8,6 +8,7 @@ import Skill from '../components/Skill';
 import Work from '../components/Work';
 import Lisence from '../components/Lisence';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 const LandingPages = () => {
   return (
@@ -67,6 +68,7 @@ const LandingPages = () => {
       >
         <Contact />
       </motion.section>
+      <Footer />
     </div>
   );
 };
