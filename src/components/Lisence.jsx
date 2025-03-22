@@ -47,6 +47,9 @@ const License = () => {
   return (
     <section className="min-h-screen px-6 md:px-12 bg-black text-white font-jetbrains flex flex-col justify-center">
       <h2 className="text-4xl md:text-5xl font-bold text-center text-green-400 mb-12">My Licenses</h2>
+      <p className="text-lg text-center text-gray-300 mb-8">
+        Explore the licenses and certifications I have earned throughout my career, demonstrating my commitment to continuous learning and growth.
+      </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {licenses.map((license, index) => (
           <div
@@ -56,7 +59,7 @@ const License = () => {
             <img
               src={license.image}
               alt={license.name}
-              className="rounded-xl w-full h-96 object-cover" 
+              className="rounded-xl w-full h-96 object-cover"
             />
             <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/100 via-black/95 to-transparent p-6 rounded-b-2xl">
               <h3 className="text-2xl font-semibold text-white">{license.name}</h3>
