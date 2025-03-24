@@ -10,7 +10,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
-  const [loading, setLoading] = useState(false);  // state untuk loading
+  const [loading, setLoading] = useState(false);  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,32 +22,31 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);  // set loading ke true sebelum mengirim
-
+    setLoading(true);  
     emailjs.send(
-      'service_ny52i58', // Ganti dengan service ID yang sesuai
-      'template_xki2ks6', // Ganti dengan template ID yang sesuai
+      'service_ny52i58', 
+      'template_xki2ks6', 
       formData,
-      'IPGm04UKgYejOvTYF' // Public Key
+      'IPGm04UKgYejOvTYF' 
     )
     .then(() => {
       Swal.fire({
         icon: 'success',
         title: 'Email Sent!',
         text: 'Your message has been sent successfully!',
-        confirmButtonColor: '#4CAF50',  // Set tombol konfirmasi menjadi hijau
+        confirmButtonColor: '#4CAF50',  
       });
-      setFormData({ name: '', email: '', subject: '', message: '' });  // reset form
-      setLoading(false);  // set loading ke false setelah pengiriman berhasil
+      setFormData({ name: '', email: '', subject: '', message: '' });  
+      setLoading(false);  
     })
     .catch(() => {
       Swal.fire({
         icon: 'error',
         title: 'Error!',
         text: 'There was an error sending your email. Please try again later.',
-        confirmButtonColor: '#F44336',  // Set tombol konfirmasi menjadi merah
+        confirmButtonColor: '#F44336',  
       });
-      setLoading(false);  // set loading ke false setelah pengiriman gagal
+      setLoading(false); 
     });
   };
 
