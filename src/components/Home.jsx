@@ -42,7 +42,7 @@ const Home = () => {
 
         <div className="flex justify-center md:justify-start items-center gap-6 mb-12">
           <a
-            href="https://drive.google.com/file/d/1zAtYS3WZiiUShgqBuBDUOPE0IHVFSJcN/view?usp=sharing"
+            href="https://drive.google.com/file/d/1tYvdaMOpvhhjF-ZzivsLaNW8xVpmB9xq/view?usp=sharing"
             className="flex items-center gap-2 px-5 py-2 border-2 border-green-400 text-green-400 rounded-full hover:bg-green-400 hover:text-black transition-all duration-300 hover:scale-105"
             target="_blank"
             rel="noopener noreferrer"          
